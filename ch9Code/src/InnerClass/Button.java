@@ -10,11 +10,13 @@ public class Button {
     public String getTitle(){
         return title;
     }
-    public void setOnClickListener(OnclickListener onClickListener){
+    public void setOnClickListener(OnClickListener onClickListener){
         this.onClickListener=onClickListener;
     }
     public void onClick(){
         this.onClickListener.onClick(this.title);
     }
-    public interface On
+    public interface OnClickListener{
+        public void onClick(String title);
+    }
 }
